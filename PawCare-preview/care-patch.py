@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path(r'C:\Users\Lenovo\PawCare-preview\dist\app.js');s=p.read_text(encoding='utf-8-sig');s=s.replace("const petFields=['symptoms'","const petFields=['careMode','carePurpose','symptoms'");s=s.replace("state.symptoms.map(esc).join('、')}</p></div><label>意向日期", "(state.careMode==='purpose'?esc(state.carePurpose):state.symptoms.map(esc).join('、'))}</p></div><label>意向日期");p.write_text(s,encoding='utf-8')
