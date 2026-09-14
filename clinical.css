@@ -202,3 +202,7 @@ body{min-height:100vh;min-height:100dvh;overflow:hidden}
  .home-indicator{height:max(24px,env(safe-area-inset-bottom));flex-shrink:0}
  .phone>dialog.as-page{top:max(50px,env(safe-area-inset-top));bottom:max(24px,env(safe-area-inset-bottom))}
 }
+/* Desktop preview preserves the complete iPhone aspect ratio. */
+@media(min-width:501px){
+ .phone{position:fixed;left:50%;top:50%;width:393px;max-width:none;height:852px;margin:0;transform:translate(-50%,-50%) scale(var(--handset-scale,1));transform-origin:center center}
+}

@@ -198,3 +198,6 @@ function toggleSpecialtyDropdown(trigger){
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-close-specialty]')){closeSpecialtyDropdown();scroll.querySelector('[data-filter="专科筛选"]')?.focus({preventScroll:true});}else if(!e.target.closest('#specialty-dropdown,[data-filter="专科筛选"]'))closeSpecialtyDropdown();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&scroll.querySelector('#specialty-dropdown')){closeSpecialtyDropdown();scroll.querySelector('[data-filter="专科筛选"]')?.focus({preventScroll:true});}});
+// Fit the entire handset proportionally, including browser/OS display scaling.
+function fitHandsetPreview(){const scale=Math.min(1,(window.innerWidth-32)/393,(window.innerHeight-32)/852);document.documentElement.style.setProperty('--handset-scale',String(Math.max(.1,scale)));}
+fitHandsetPreview();window.addEventListener('resize',fitHandsetPreview);
