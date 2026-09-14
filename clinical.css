@@ -1,0 +1,204 @@
+/* Professional healthcare theme: presentation only. */
+:root{--pink:#E7939C;--pink-dark:#A55462;--pink-soft:#FAECEE;--ink:#292D32;--muted:#69717A;--bg:#F7F8F9;--surface:#FFFFFF;--edge:#E9EBEE;--shadow:none;--green:#648579}
+body{background:#E9EBED;color:var(--ink)}
+.phone{background:var(--bg);box-shadow:0 10px 36px #20283012}
+svg{stroke-width:1.7}
+.brand b{font-size:25px;letter-spacing:-.5px}.brand small{font-size:11px;color:#707780;letter-spacing:0}
+.scroll{padding:0 16px 16px}.page-scroll{padding-top:4px}
+.section-heading{margin-bottom:10px}.section-heading h2,.page-scroll h2{font-weight:650}.section-heading button{color:var(--muted)}
+.card,.metrics,.secondary-actions button,.primary,.pet-mini,.form-surface,.hospital-card,.comparison-head,.dimensions,.visit-header,.medical-cards>button,.section-block,.archive-pet,.med-card,.review-card,.profile-links,.pet-slide,.empty-pet-state{background:#FFF;border-color:var(--edge);border-radius:14px;box-shadow:none}
+.card,.section-block,.med-card,.hospital-card{padding:14px;margin-bottom:12px}
+.pet{height:148px;border-radius:16px;margin-bottom:10px;background:#F1F0ED}.pet-copy{padding-top:15px}.pet-copy .quote{display:none}.pet-name{font-size:25px}.pet-copy>p{color:#60676F}.pet:after{background:linear-gradient(90deg,#F5F4F1 0%,rgba(245,244,241,.85) 28%,transparent 72%)}
+.health{margin-top:12px;border-radius:6px;background:#EDF4F0;color:#4C7463;padding:5px 8px}
+.metrics{padding:12px 7px;margin-bottom:14px}.metrics button>span{color:#737B83}.metrics button{border-right-color:#E7EAED}
+.features{margin-bottom:14px}.primary{padding:13px 14px;background:#FFF;border-color:#EBD5D9;min-height:72px}.primary .icon-circle{background:#FAECEE;color:#B96877}.primary>span:last-child{color:#A55462}
+.secondary-actions{gap:8px;margin-top:8px}.secondary-actions button{padding:11px 3px;border-radius:12px;min-height:94px}.secondary-actions small{font-size:11px;color:#727A83}.secondary-actions b{margin-top:5px}
+.icon-circle,.soft-icon,.blue,.peach,.green{background:#F1F3F4;color:#747D86;border-radius:10px}.icon-circle{width:36px;height:36px}.avatar{box-shadow:none}
+.reminders,.recent{border:0;border-radius:14px}.reminder{background:transparent;border-radius:0;padding:11px 0;min-height:68px}.reminder+.reminder{border-top:1px solid #ECEEF0;margin-top:0}.reminder p{color:#69717A}.reminder time{color:#68717A}.reminder .icon-circle{background:#F3F4F5;color:#727A83}
+.small-primary,.small-soft,.wide-button,.cta,.outline-btn,.add-button,.compare-toggle,.dose-btn,.chips button{border-radius:10px;box-shadow:none}
+.cta,.wide-button{background:var(--pink);color:#442930;min-height:46px}.cta:hover,.wide-button:hover{background:#E18C96}.small-primary{background:var(--pink);color:#442930}.small-soft{background:#F4F5F6;color:#626A74}
+.add-button{background:#FFF;color:var(--pink-dark);border:1px solid #E5DADD;min-height:44px}.outline-btn{background:#FFF;border-color:#DFE3E7;color:#5F6872}.outline-btn:hover{background:#F3F4F5}
+.visit-links{margin-top:10px}.visit-links button{border-radius:8px;border-color:#E7EAED;background:transparent;font-size:12px}
+.tag,.tag-list span,.complete,.demo-pill,.timeline-date>span{border-radius:5px;padding:3px 6px}.tag-list span{background:#F2F4F5;color:#636D77}.tag-list span:first-child{background:#FAECEE;color:#A55462}.complete{background:#EDF4F0;color:#527865}
+nav,.home-indicator,#route-footer{background:#FFF;border-color:#E9EBEE}nav button{color:#737C86}nav .active{color:#AD5F6D}#route-footer{padding-top:9px}.home-indicator span{background:#292D32}
+.voice-entry,.summary-card,.need-note,.recommendation,.archive-note,.med-pet,.wallet-balance,.care-choice-options>button:first-child,.pet-slide.selected,.last-visit-shortcut>button{background:#FFF;box-shadow:none;border-radius:14px;border-color:#E5E8EB}
+.voice-entry{padding:12px;margin-bottom:14px}.voice-entry>span:first-child{color:#A55462;background:#FAECEE}.voice-entry small{color:#707880}.pet-mini{padding:10px 12px;margin-bottom:12px}
+.form-surface{padding:14px 12px 0;margin-bottom:12px}fieldset{margin-bottom:16px}.choice{border-radius:8px;background:#F1F3F4;color:#626B75}.choice.selected{background:#FAECEE;color:#A55462;border-color:#DFB0B8}.summary-card{padding:14px}.summary-card h2,.summary-list dd{color:var(--ink)}.summary-list dt{color:var(--muted)}
+.need-note{padding:11px 12px;margin-bottom:10px;background:transparent;border-radius:0;color:#555E67}.need-note small{color:#707880}.filter-bar,.tabs,.archive-tabs{background:transparent}.filter-bar button{font-size:12px}.filter-bar .selected,.tabs .selected{color:#A55462}.filter-bar .selected:after,.tabs .selected:after{background:var(--pink)}
+.hospital-bottom{border-color:#EAEDF0;padding-top:10px}.rating{color:#A55462}.compare-toggle{color:#68717A;border-color:#DDE2E6}.compare-toggle.checked{background:#FAECEE;color:#A55462;border-color:#E0B5BC}
+.comparison-head{padding:12px;margin-bottom:12px}.dimensions{padding:0 12px}.dimension{padding:11px 0;border-color:#E9ECEF}.dimension h3{color:#6D7680}.dimension-values{color:#353D46}.recommendation{padding:14px;margin-top:12px;border-left:3px solid var(--pink)}.recommendation h2{color:#454D55}.recommendation p{color:#626B74}.meter{background:#ECEFF1}.meter i,.progress-track i{background:var(--pink)}
+.visit-header,.archive-pet{padding:12px;margin-bottom:12px}.medical-cards{gap:0;margin-bottom:14px;background:#FFF;border-radius:14px;overflow:hidden}.medical-cards>button{padding:13px 12px;border:0;border-bottom:1px solid #EAEDF0;border-radius:0}.medical-cards>button:last-child{border-bottom:0}.medical-cards p,.section-block p{color:#636C76}
+.archive-note{padding:8px 0;margin-bottom:14px;background:transparent;color:#717982}.timeline-item{padding-bottom:14px}.timeline-item article{padding:12px;background:transparent;border:0;border-bottom:1px solid #E2E6E9;border-radius:0;box-shadow:none}.timeline-item p{color:#66707A}.timeline-item .result{color:#515B65;border-top-color:#E9ECEF}.timeline:before{background:#DFE3E7}.timeline-item:before{background:#E7939C}
+.med-pet{padding:10px 0;margin-bottom:12px;background:transparent}.med-pet p{color:#68717A}.med-title p{color:#707982}.demo-pill{background:#F3F4F5;color:#727B84}.dose-row{padding:10px 0;border-color:#EAEDF0}.dose-row.completed{color:#648579}.dose-btn{background:#FAECEE;color:#A55462}.dose-remind,.med-settings-link{color:#A55462}.progress-track{background:#ECEFF1}.review-card{padding:12px}.review-card b{color:#353D46}.review-card>span{color:#717A83}
+.owner-card{padding:14px 4px 18px;border-radius:14px}.owner-card p,.pet-card-main p{color:#69727C}.owner-arrow{color:#838B94}.pet-selector{margin-bottom:16px}.pet-slide{padding:14px}.pet-slide.selected{border-color:#D7A4AE}.pet-card-main .avatar{border-radius:12px}.select-pet{padding-top:10px;margin-top:10px;border-color:#E8EBEE;color:#A55462}.pet-switch-hint{color:#757E88}.profile-links{padding:0 12px}.profile-links button{min-height:54px;border-color:#E8EBEE}.profile-links button>span:first-child,.account-menu button>span:first-child{color:#747E88}.pet-details dt{color:#737D86}.pet-details dd{color:#333C45}.pet-details>div{padding:11px 0;border-color:#E6E9EC}
+.phone>dialog.as-page{background:var(--bg);padding-left:16px;padding-right:16px}.phone>dialog.as-page .sheet-head{background:transparent;margin-bottom:12px}.phone>dialog.as-page .sheet-head h2{color:var(--ink)}#sheet-body .detail{background:#FFF;border:1px solid #E9EBEE;border-radius:12px;padding:14px}#sheet-body p{color:#626C76}.entry-form label{color:#535D67}.entry-form input,.entry-form select,textarea{background:#FFF;border-color:#DDE2E6;border-radius:8px;color:var(--ink)}
+.account-menu,.account-settings{border-radius:14px;background:#FFF}.account-menu button{padding:14px 12px;border-color:#E9ECEF}.account-menu small,.account-settings small{color:#737C85}.account-settings label{padding:14px 0;border-color:#E9ECEF}.account-summary>.soft-icon{border-radius:12px}.wallet-balance{padding:18px;margin-bottom:14px}.wallet-balance>span{color:#707A83}
+.care-choice-options>button,.purpose-grid button,.last-visit-shortcut>button{border-radius:14px;padding:14px 12px;border-color:#E3E7EA;background:#FFF}.as-page .care-choice-options{gap:12px}.care-choice-options small,.purpose-grid button>span{color:#A55462}.purpose-grid{gap:10px}.purpose-grid small,.last-visit-shortcut small{color:#6D7680}.last-visit-shortcut{margin-bottom:16px}.last-visit-shortcut strong{color:#4E5862}
+.prescription-summary{background:#F3F5F6;border-radius:10px;padding:12px}.prescription-summary b{color:#353E47}.edit-dose-setting{border-radius:12px;border-color:#E5E8EB}.prescription-fields legend{color:#555F69}.voice-demo blockquote{background:#FFF;border-radius:12px;color:#5C6670}.specialty-dropdown{border-radius:14px;background:#FFF;box-shadow:none;border-color:#E4E8EB}.specialty-dropdown-options button{border-radius:8px;background:#F3F4F5}.specialty-dropdown-options .selected{background:#FAECEE;color:#A55462}.delete-entry{border-radius:10px;color:#A55462;border-color:#E3CDD2}.microcopy,.demo-label{color:#737C85!important}
+@media(max-width:500px){body{background:var(--bg)}.phone{box-shadow:none}.scroll{padding-left:16px;padding-right:16px}}
+/* Warm care accents on the professional foundation; no layout changes. */
+:root{--bg:#FAF9F7;--edge:#ECE9E5;--green:#648579}
+body{background:#ECEAE7}.phone{background:var(--bg)}
+.icon-circle,.soft-icon{background:#F3F1EE;color:#8B8175}
+.primary .icon-circle{background:#F9E9EC;color:#B96F7D}.primary{background:#FFFCFC;border-color:#EBD7DC}
+.secondary-actions .blue{background:#F7EDEF;color:#B77C88}
+.secondary-actions .peach{background:#FCF0E3;color:#B88A57}
+.secondary-actions .green{background:#EDF4EE;color:#6D927D}
+.health,.complete{background:#ECF4ED;color:#557D64}
+.metrics{background:#FFFEFC}.metrics button:nth-child(1)>span{color:#B38D62}.metrics button:nth-child(2)>span{color:#739581}.metrics button:nth-child(3)>span{color:#B97D8A}
+.reminders{background:#FFFEFB}.recent{background:#FFFDFC}
+.reminder:first-of-type .icon-circle{background:#FCF0E3;color:#B68A58}
+.reminder+.reminder .icon-circle{background:#F8EBEE;color:#B87B88}
+.small-soft{background:#F8EDF0;color:#A66D7A}
+.visit-links button:nth-child(1){background:#F4F6F1;color:#738570}.visit-links button:nth-child(2){background:#FBF2E8;color:#AA8258}.visit-links button:nth-child(3){background:#F8EFF1;color:#AA7883}
+.voice-entry{background:#FFFBFC;border-color:#EDDFE2}.voice-entry>span:first-child{background:#F9EAEE;color:#B57484}
+.summary-card{background:#FFFCF6;border-color:#EEE8DD}.summary-card h2{color:#5D564B}
+.medical-cards>button:nth-child(1) .soft-icon{background:#F9ECEF;color:#B47B88}
+.medical-cards>button:nth-child(2) .soft-icon{background:#EEF4EE;color:#769580}
+.medical-cards>button:nth-child(3) .soft-icon{background:#FCF0E3;color:#B58B5D}
+.medical-cards>button:nth-child(4) .soft-icon{background:#F8F3E4;color:#A58F5E}
+.tag-list span:first-child{background:#F8ECEF;color:#AA707E}.complete{background:#EDF4EF;color:#62836D}
+.recommendation{background:#FFFCF7;border-left-color:#E7939C}.comparison-head{background:#FFFEFC}
+.archive-note{color:#7D8477}.archive-note>span{color:#82977F}
+.med-card{background:#FFFEFC}.med-pet{color:#4D5651}.med-pet p{color:#768076}
+.review-card{background:#FFFCF5;border-color:#EDE7DC}.review-card>span{color:#B19362}.review-card button{color:#9D8565}
+.dose-row.completed{color:#678974}.dose-row.completed>svg{color:#799B85}.dose-row:not(.completed)>svg{color:#B99364}
+.prescription-summary{background:#FAF4EA}.prescription-summary b{color:#665B4A}
+.profile-links button:nth-child(1)>span:first-child{color:#B87D8B}.profile-links button:nth-child(2)>span:first-child{color:#7A9883}.profile-links button:nth-child(3)>span:first-child{color:#AC8D65}.profile-links button:nth-child(4)>span:first-child{color:#B68D5F}
+.owner-card .soft-icon{background:#F8ECEF;color:#B07B88}.pet-slide.selected{background:#FFFCFC;border-color:#DCB9C1}
+.account-menu button:nth-child(1)>span:first-child{color:#B57B88}.account-menu button:nth-child(2)>span:first-child{color:#B09160}.account-menu button:nth-child(3)>span:first-child{color:#7E9584}
+.wallet-balance{background:#FFFCF4}.care-choice-options>button:first-child{background:#FFFAFB;border-color:#ECD9DF}.care-choice-options>button:last-child .soft-icon{background:#EEF4EF;color:#73907C}
+.purpose-grid button:nth-child(2)>span{color:#789780}.purpose-grid button:nth-child(3)>span{color:#B18C5E}.last-visit-shortcut>button{background:#FFFDFA;border-color:#EBE4DA}
+.specialty-dropdown{background:#FFFEFC}.specialty-dropdown-options button{background:#F5F3F0}.specialty-dropdown-options .selected{background:#F9EAEE;color:#A86B7B}
+@media(max-width:500px){body{background:var(--bg)}}
+.reminder .icon-circle{background:#FCF0E3;color:#B68A58}.reminder+.reminder .icon-circle{background:#F8EBEE;color:#B87B88}
+/* Medical timeline: distinct record cards aligned with the shared card system. */
+.timeline-item article{background:#FFFEFC;border:1px solid var(--edge);border-radius:14px;padding:14px;box-shadow:none}
+.timeline-item{padding-bottom:14px}
+.timeline-item .result{border-top:1px solid #ECE9E5}
+/* Restrained brand palette: rose accents, neutral surfaces, semantic success only. */
+:root{--bg:#FAF9F8;--edge:#ECE8E9;--pink:#E7939C;--pink-dark:#A55462;--pink-soft:#FAECEE}
+.icon-circle,.soft-icon,.blue,.peach,.green{background:#F7EFF1;color:#B3828D}
+.secondary-actions .blue,.secondary-actions .peach,.secondary-actions .green{background:#F8EDF0;color:#B77F8C}
+.metrics button:nth-child(1)>span,.metrics button:nth-child(2)>span,.metrics button:nth-child(3)>span{color:#B5828D}
+.reminder .icon-circle,.reminder+.reminder .icon-circle{background:#F8EDF0;color:#B77F8C}
+.visit-links button:nth-child(1),.visit-links button:nth-child(2),.visit-links button:nth-child(3){background:#FFFCFD;color:#9B747F;border-color:#EDE5E8}
+.medical-cards>button:nth-child(1) .soft-icon,.medical-cards>button:nth-child(2) .soft-icon,.medical-cards>button:nth-child(3) .soft-icon,.medical-cards>button:nth-child(4) .soft-icon{background:#F8EFF2;color:#B3828E}
+.summary-card{background:#FFFCFD;border-color:#EEE5E8}.summary-card h2{color:var(--ink)}
+.recommendation{background:#FFFCFD}.comparison-head,.metrics,.med-card,.recent,.reminders,.timeline-item article{background:#FFFEFE}
+.archive-note{color:#7F767C}.archive-note>span{color:#B18A95}
+.med-pet{color:var(--ink)}.med-pet p{color:var(--muted)}
+.review-card{background:#FFFBFC;border-color:#EEE4E7}.review-card>span,.review-card button{color:#B07E8B}
+.dose-row:not(.completed)>svg{color:#B3828D}
+.prescription-summary{background:#F7F3F4}.prescription-summary b{color:#51494D}
+.profile-links button:nth-child(1)>span:first-child,.profile-links button:nth-child(2)>span:first-child,.profile-links button:nth-child(3)>span:first-child,.profile-links button:nth-child(4)>span:first-child{color:#B3828D}
+.account-menu button:nth-child(1)>span:first-child,.account-menu button:nth-child(2)>span:first-child,.account-menu button:nth-child(3)>span:first-child{color:#B3828D}
+.wallet-balance{background:#FFFBFC}.wallet-empty>span{color:#B18B96}
+.care-choice-options>button:last-child .soft-icon{background:#F8EFF2;color:#B3828D}
+.purpose-grid button>span,.purpose-grid button:nth-child(2)>span,.purpose-grid button:nth-child(3)>span{color:#B3828D}
+.last-visit-shortcut>button{background:#FFFCFD;border-color:#EDE4E7}
+.specialty-dropdown{background:#FFFEFE}.specialty-dropdown-options button{background:#F4F2F3}
+/* Green communicates a completed or healthy state, not a feature category. */
+.health,.complete{background:#EDF4EF;color:#62836D}.dose-row.completed{color:#678974}.dose-row.completed>svg{color:#799B85}
+/* Home: warm, open grouping without a grid of outlined cards. */
+.phone{background:#FAF9F8}
+.pet{border-radius:18px}
+.metrics{background:#FFFCFB;border:0;border-radius:18px;box-shadow:none;padding:13px 8px;margin-bottom:14px}
+.metrics button{border-right-color:#EEE7E7}
+.metrics button>span{background:transparent}
+.metrics button:nth-child(1)>span{color:#A48D94}.metrics button:nth-child(2)>span{color:#BE949F}.metrics button:nth-child(3)>span{color:#B57D8A}
+.features .primary{background:#F9ECEF;border:0;border-radius:18px;padding:15px 16px;box-shadow:none}
+.features .primary .icon-circle{background:transparent;color:#B8687B;border-radius:0}
+.features .primary>span:last-child{color:#B8687B}
+.features .primary small{color:#82747B}
+.features .secondary-actions{gap:8px;margin-top:10px}
+.features .secondary-actions button{background:transparent;border:0;box-shadow:none;border-radius:16px;padding:12px 3px;min-height:96px}
+.features .secondary-actions .blue{background:#F5E8ED;color:#AF7888;border-radius:13px}
+.features .secondary-actions .peach{background:transparent;color:#BA8291;border-radius:0}
+.features .secondary-actions .green{background:#F1ECEF;color:#9F858E;border-radius:13px}
+.features .secondary-actions b{color:#353038}.features .secondary-actions small{color:#827A80}
+.reminders.card,.recent.card{background:#FFFCFC;border:0;border-radius:18px;box-shadow:none;padding:16px;margin-bottom:14px}
+.reminders .reminder{background:transparent;border-radius:0}
+.reminders .reminder+.reminder{border-top-color:#F0E8EB}
+.reminders .reminder .icon-circle{background:transparent;color:#B47D8D}
+.reminders .reminder+.reminder .icon-circle{background:#F8EDF0;color:#B98694;border-radius:12px}
+.recent .visit-links button{background:transparent;border:0;border-right:1px solid #EEE6E9;border-radius:0;color:#98737F}
+.recent .visit-links button:last-child{border-right:0}
+.features button:hover{background-color:#F7EFF1}
+/* One shared container for the three home management shortcuts. */
+.features .secondary-actions{background:#FFF9FA;border:0;border-radius:18px;box-shadow:none;gap:0;padding:10px 0;margin-top:10px;overflow:hidden}
+.features .secondary-actions button{position:relative;background:transparent;border:0;border-radius:0;min-height:90px;padding:4px 3px;box-shadow:none}
+.features .secondary-actions button+button:before{content:'';position:absolute;left:0;top:12px;bottom:12px;width:1px;background:#F0E7EB}
+.features .secondary-actions .icon-circle{color:#B18491}
+.features .secondary-actions b{color:#353038}
+.features .secondary-actions small{color:#827A80}
+.features .secondary-actions button:hover{background:#FCF3F5}
+/* Near-white warm surfaces; rose remains in controls and small accents. */
+:root{--surface:#FFFDFC}
+.card,.metrics,.pet-mini,.form-surface,.hospital-card,.comparison-head,.dimensions,.visit-header,.medical-cards,.medical-cards>button,.section-block,.archive-pet,.med-card,.review-card,.profile-links,.pet-slide,.empty-pet-state,.summary-card,.recommendation,.voice-entry,.wallet-balance,.account-menu,.account-settings,.specialty-dropdown{background:#FFFDFC}
+.features .primary{background:#FFFDFC}
+.features .secondary-actions{background:#FFFDFC}
+.features .secondary-actions button{background:transparent}
+.reminders.card,.recent.card,.timeline-item article{background:#FFFDFC}
+.reminders .reminder{background:transparent}
+.pet-slide.selected{background:#FFFDFC}
+.care-choice-options>button,.care-choice-options>button:first-child,.care-choice-options>button:last-child,.purpose-grid button,.last-visit-shortcut>button{background:#FFFDFC}
+.prescription-summary{background:#FCFBFA}
+#sheet-body .detail,.edit-dose-setting,.voice-demo blockquote{background:#FFFDFC}
+.features .primary:hover{background:#FCFBFA}
+.features .secondary-actions button:hover{background:#FAF9F8}
+/* Emphasize the main care action without a large pink fill. */
+.features .primary{background:#FFFDFC;border:1px solid #E6BBC4;border-left:3px solid #D98798;padding-left:14px}
+.features .primary b{font-weight:700;font-size:17px;color:#343039}
+.features .primary .icon-circle{background:#F8E9EE;color:#AD6075;border-radius:12px}
+.features .primary>span:last-child{color:#B56378}
+.features .secondary-actions .peach{background:#F5ECEF;color:#B18491;border-radius:13px}
+/* Primary home action: hierarchy through proportion and a refined outline. */
+.features .primary{min-height:92px;padding:19px 16px;background:#FFFDFD;border:1.25px solid #DDA3AF;border-radius:18px;box-shadow:0 3px 10px rgba(55,43,47,.045)}
+.features .primary .icon-circle{width:42px;height:42px;flex-shrink:0;border-radius:13px;background:#F8E9EE;color:#B5667B}
+.features .primary .icon-circle svg{width:26px;height:26px}
+.features .primary b{font-size:19px;font-weight:750;line-height:1.4;color:#302C33}
+.features .primary small{color:#8B8187;font-size:12px;line-height:1.5;margin-top:4px}
+.features .primary>span:last-child{color:#C7788C;margin-left:auto}
+.features .primary>span:last-child svg{width:25px;height:25px;stroke-width:1.9}
+.features .secondary-actions{margin-top:16px}
+.features .primary:hover{background:#FFFAFB;border-color:#CE8B9C}
+/* Borderless primary action, softly raised above the warm page. */
+.features .primary{border:0;background:#FFF9FA;border-radius:19px;box-shadow:0 3px 12px rgba(58,43,49,.045)}
+.features .primary .icon-circle{background:#F8E7ED;color:#B35F76}
+.features .primary>span:last-child{color:#C57188}
+.features .primary>span:last-child svg{width:26px;height:26px;stroke-width:2}
+.features .primary:hover{background:#FFF9FA;border:0;box-shadow:0 4px 14px rgba(58,43,49,.055)}
+/* Clean rose palette for the home primary action; geometry unchanged. */
+.features .primary,.features .primary:hover{background:#FFFBFC}
+.features .primary .icon-circle{background:#FCECF1;color:#D96F85}
+.features .primary>span:last-child{color:#D96F85}
+.features .primary b{color:#1F2937}
+.features .primary small{color:#7A7F87}
+/* Home light-card treatment: near-white surfaces and delicate rose-gray edges. */
+.metrics,.reminders.card,.recent.card{background:#FFFDFC;border:1px solid #F0E7EB;box-shadow:none}
+.features .primary,.features .primary:hover{background:#FFFBFC;border:1px solid #ECD7DF;box-shadow:0 2px 7px rgba(58,43,49,.018)}
+.features .secondary-actions{background:transparent;border:0;border-radius:0;box-shadow:none;gap:9px;padding:0;margin-top:13px;overflow:visible}
+.features .secondary-actions button{background:#FFFDFC;border:1px solid #F0E7EB;border-radius:16px;padding:12px 3px;min-height:103px;box-shadow:none}
+.features .secondary-actions button+button:before{display:none}
+.features .secondary-actions button:hover{background:#FFFAFC}
+.features .secondary-actions .blue,.features .secondary-actions .peach,.features .secondary-actions .green{background:#F9EFF3;color:#BB8595;border-radius:12px}
+/* Barely visible home card outlines. */
+.metrics,.reminders.card,.recent.card,.features .secondary-actions button{border:.5px solid rgba(191,156,169,.13)}
+.features .primary,.features .primary:hover{border:.5px solid rgba(191,139,157,.22)}
+/* App viewport: bounded handset on desktop, full-height mobile canvas. */
+html,body{width:100%;min-height:100%;margin:0}
+body{min-height:100vh;min-height:100dvh;overflow:hidden}
+.phone{width:393px;max-width:calc(100vw - 32px);height:852px;height:min(852px,calc(100dvh - 32px));margin:16px auto;border:1px solid #E9E5E6;border-radius:36px;overflow:hidden;box-shadow:0 8px 32px rgba(39,35,38,.08);isolation:isolate}
+.phone .scroll{min-height:0;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.page-head>button,.as-page .sheet-head #close{appearance:none;-webkit-appearance:none;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:50%!important;width:44px;min-width:44px;height:44px;display:grid;place-items:center;padding:0;color:#626473;-webkit-tap-highlight-color:transparent}
+.page-head>button:focus,.as-page .sheet-head #close:focus{outline:none}
+.page-head>button:focus-visible,.as-page .sheet-head #close:focus-visible{outline:none;background:#F5EBEF!important}
+.page-head>button svg,.as-page .sheet-head #close svg{width:23px;height:23px;stroke-width:1.8}
+@media(max-width:500px){
+ body{background:#FAF9F8}
+ .phone{width:100%;max-width:393px;height:100vh;height:100dvh;margin:0 auto;border:0;border-radius:0;box-shadow:none}
+ .status{height:max(50px,env(safe-area-inset-top));flex-shrink:0}
+ .home-indicator{height:max(24px,env(safe-area-inset-bottom));flex-shrink:0}
+ .phone>dialog.as-page{top:max(50px,env(safe-area-inset-top));bottom:max(24px,env(safe-area-inset-bottom))}
+}
