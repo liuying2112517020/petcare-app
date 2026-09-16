@@ -206,3 +206,311 @@ body{min-height:100vh;min-height:100dvh;overflow:hidden}
 @media(min-width:501px){
  .phone{position:fixed;left:50%;top:50%;width:393px;max-width:none;height:852px;margin:0;transform:translate(-50%,-50%) scale(var(--handset-scale,1));transform-origin:center center}
 }
+.hospital-main[data-hospital-detail]{cursor:pointer;border-radius:12px}.hospital-main[data-hospital-detail]:focus-visible{outline:2px solid #DFA7B7;outline-offset:4px}.hospital-main[data-hospital-detail] h2:after{content:' ›';color:#BD899A}
+/* Hospital details: balanced, reachable bottom actions. */
+#sheet-body:has(.hospital-detail-actions){min-height:calc(100% - 76px);display:flex;flex-direction:column}
+.hospital-detail-actions{position:sticky;bottom:-26px;z-index:3;display:grid;grid-template-columns:1fr 1.5fr;gap:10px;align-items:stretch;margin-top:auto;padding:14px 0 16px;background:#FAF9F8;border-top:1px solid #EEE8EB;flex-shrink:0}
+.hospital-detail-actions .outline-btn,.hospital-detail-actions .cta{width:100%;min-height:48px;margin:0;padding:12px 8px;border-radius:12px;font-size:15px;font-weight:600;line-height:1.4;display:flex;align-items:center;justify-content:center}
+.hospital-detail-actions .outline-btn{background:#FFFDFC;border:1px solid #E8D4DC;color:#A76478}
+.hospital-detail-actions .cta{background:#E7939C;color:#442930}
+/* Persistent core navigation remains above page-level overlays. */
+.phone>nav{position:relative;z-index:10;flex-shrink:0}
+.phone>dialog.as-page{bottom:83px}
+.phone>dialog.as-page .hospital-detail-actions{bottom:-26px}
+button{transition:transform 180ms ease,background-color 180ms ease,color 180ms ease}
+button:active,.hospital-main[role=button]:active{transform:scale(.98)}
+nav button{transition:color 180ms ease,background-color 180ms ease}
+nav button.active{color:#C57287}
+#welcome-screen{position:absolute;inset:59px 0 29px;z-index:15;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;background:#FAF9F8;text-align:center;overflow:auto}
+.welcome-brand>svg{width:52px;height:52px;margin:auto;color:#D98699;fill:currentColor;stroke:none}
+.welcome-brand h1{font-size:34px;margin:12px 0 8px;letter-spacing:-1px;color:#292D32}.welcome-brand p{font-size:15px;color:#77727B;margin:0}
+.welcome-pet{display:flex;flex-direction:column;align-items:center;gap:18px;margin:36px 0}.welcome-pet .avatar{width:112px;height:112px;border-radius:28px}.welcome-pet span{font-size:13px;color:#9A808A}
+.welcome-actions{width:100%;margin-top:20px}.welcome-actions .cta{width:100%;min-height:48px;border-radius:14px}.welcome-actions p{font-size:12px;color:#787A82;margin:14px 0 8px}.welcome-actions small{font-size:11px;color:#8A8890}
+@media(max-width:500px){.phone>dialog.as-page{bottom:calc(54px + max(24px,env(safe-area-inset-bottom)))}#welcome-screen{top:max(50px,env(safe-area-inset-top));bottom:max(24px,env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){button,nav button{transition:none}button:active,.hospital-main[role=button]:active{transform:none}}
+.reduce-motion button:active{transform:none}
+/* Remove redundant helper copy; preserve medical values and status labels. */
+.features .secondary-actions small,.features .primary small,.brand small,.voice-entry small,.care-choice-intro,.care-choice-options p,.care-choice-options small,.purpose-grid small,.account-menu small,.pet-switch-hint>span,.microcopy,.demo-label,.pet-detail-hero+.microcopy{display:none!important}
+.features .secondary-actions button{min-height:86px}
+.features .primary{min-height:82px}
+/* Give home shortcuts breathing room and restore the useful care-path guidance. */
+.features .secondary-actions{gap:10px}
+.features .secondary-actions button{min-height:108px;padding:16px 4px}
+.features .secondary-actions b{margin-top:10px;font-size:14px;line-height:1.5}
+.care-choice-options p{display:block!important;color:#74717B;font-size:13px;line-height:1.65;margin:8px 0 0!important}
+.diagnosis-thumbnail{float:right;width:68px;height:68px;border-radius:12px;overflow:hidden;margin:0 0 10px 12px;flex-shrink:0}
+.diagnosis-thumbnail .avatar,.diagnosis-thumbnail .source-photo{width:68px;height:68px;border-radius:12px}
+.diagnosis-record-card{min-height:110px;display:flow-root}
+/* Photo-led welcome screen with a softly illuminated rose action. */
+#welcome-screen{inset:0;padding:88px 28px 44px;justify-content:space-between;background:linear-gradient(180deg,rgba(255,251,246,.22) 0%,transparent 35%,transparent 65%,rgba(38,27,23,.38) 100%),url('assets/welcome-companion.png') center center/cover no-repeat}
+.welcome-brand>svg{width:42px;height:42px;color:#BA6F84}
+.welcome-brand h1{font-size:34px;color:#3C3434;margin-top:9px}
+.welcome-brand p{color:#65534E;font-weight:500;text-shadow:0 1px 8px rgba(255,255,255,.45)}
+.welcome-pet{display:none}
+.welcome-actions{margin-top:auto;padding-top:30px}
+.welcome-actions .cta{background:#F6D5DF;color:#704351;border:1px solid rgba(255,245,249,.7);border-radius:16px;min-height:50px;box-shadow:0 0 18px rgba(250,206,222,.3),inset 0 1px 0 rgba(255,255,255,.7);font-size:16px;font-weight:650}
+.welcome-actions .cta:hover{background:#F9DEE6;box-shadow:0 0 22px rgba(250,206,222,.4),inset 0 1px 0 rgba(255,255,255,.7)}
+.welcome-actions p,.welcome-actions small{color:#FFF6F3;text-shadow:0 1px 4px rgba(34,24,21,.35)}
+.phone:has(#welcome-screen)>.status,.phone:has(#welcome-screen)>.home-indicator{z-index:16;position:relative;background:transparent;pointer-events:none}
+.phone:has(#welcome-screen)>.home-indicator{position:absolute;bottom:0;width:100%}
+.phone:has(#welcome-screen)>.home-indicator span{background:#FFF6F3}
+@media(max-width:500px){#welcome-screen{inset:0;padding-top:max(80px,calc(env(safe-area-inset-top) + 40px));padding-bottom:max(40px,calc(env(safe-area-inset-bottom) + 20px))}}
+/* Welcome-only editorial composition: photograph and a quiet content panel. */
+#welcome-screen{inset:0;padding:0;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;background:#FFFDFC;overflow:hidden;text-align:left}
+.welcome-visual{height:62%;flex:0 0 62%;position:relative;background:url('assets/welcome-companion.png') center 56%/cover no-repeat}
+.welcome-visual:after{content:'';position:absolute;inset:auto 0 0;height:54px;background:linear-gradient(transparent,rgba(255,253,252,.7))}
+.welcome-panel{position:relative;z-index:1;margin-top:-16px;flex:1;min-height:0;padding:30px 28px 34px;border-radius:22px 22px 0 0;background:#FFFDFC;display:flex;flex-direction:column;justify-content:space-between}
+.welcome-wordmark{display:flex;align-items:center;gap:9px}.welcome-wordmark svg{width:29px;height:29px;fill:#D17F94;stroke:none;flex-shrink:0}
+.welcome-brand h1{font-size:26px;line-height:1.25;margin:0;letter-spacing:-.6px;color:#2D3036;font-weight:700}
+.welcome-brand p{font-size:16px;font-weight:400;color:#747078;margin:13px 0 0;text-shadow:none}
+.welcome-actions{margin:22px 0 0;padding:0;width:100%}
+.welcome-actions .cta{background:#D96F85;color:#FFF;border:0;border-radius:15px;min-height:50px;box-shadow:0 2px 7px rgba(98,52,66,.07);font-size:16px;font-weight:600}
+.welcome-actions .cta:hover{background:#D2687E;box-shadow:0 2px 7px rgba(98,52,66,.07)}
+.welcome-actions small{display:block;text-align:center;font-size:11px;color:#9A9599;text-shadow:none;margin-top:12px}
+.phone:has(#welcome-screen)>.home-indicator span{background:#30333A}
+@media(max-width:500px){#welcome-screen{inset:0;padding:0}.welcome-panel{padding-bottom:max(34px,calc(env(safe-area-inset-bottom) + 16px))}}
+@media(max-height:700px){.welcome-panel{padding-top:20px}.welcome-actions{margin-top:14px}.welcome-brand p{margin-top:9px}}
+/* Compact charts and a calendar block create rhythm without additional hues. */
+.today-progress,.course-progress{display:flex;align-items:center;gap:12px;padding:10px 0 12px}
+.today-progress{border-bottom:1px solid #F0E8EB;margin-bottom:2px}
+.care-ring{position:relative;width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center}
+.care-ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);fill:none;stroke-width:4}
+.care-ring .ring-track{stroke:#F1E9EC}.care-ring .ring-value{stroke:#D98DA0;stroke-linecap:round;transition:stroke-dasharray 200ms ease}
+.care-ring strong{font-size:18px;color:#39353B;font-variant-numeric:tabular-nums}.care-ring strong small{font-size:11px;font-weight:500;color:#8D838A;margin-left:1px}
+.today-progress b,.course-progress b{font-size:14px;font-weight:600}.today-progress>div>span{display:block;font-size:11px;color:#8B838A;margin-top:5px}
+.progress-status{margin-left:auto;background:#F8EFF2;color:#A77484;font-size:11px;border-radius:6px;padding:4px 7px;white-space:nowrap}
+.course-progress{margin:12px 0 0;background:#FCF9FA;border-radius:12px;padding:10px 12px}.course-progress p{font-size:12px;color:#80777F;margin:5px 0 0}
+.review-date{width:49px;min-width:49px;align-self:center;text-align:center;border-radius:10px;overflow:hidden;background:#FFFDFC;border:1px solid #EFE4E9}
+.review-date>span{display:block;background:#F8EDF1;color:#B07B8C;font-size:11px;padding:3px}.review-card .review-date>b{display:block;font-size:24px;line-height:1.3;padding:3px 0;color:#55464D}
+.timeline-date>span{display:inline-flex;align-items:center;gap:4px}.timeline-date>span svg{width:13px;height:13px;color:#BA8796}
+.companion-sketch{width:120px;height:84px;margin:0 auto 12px}.companion-sketch svg{width:120px;height:84px;fill:none;stroke:#B699A4;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.companion-sketch .sketch-accent{stroke:#D18B9D;fill:#FAEDF1}
+.booking-success .companion-sketch svg{width:120px;height:84px}
+@media(prefers-reduced-motion:reduce){.care-ring .ring-value{transition:none}}.reduce-motion .care-ring .ring-value{transition:none}
+/* Immersive welcome: one centered content group on the full photograph. */
+#welcome-screen{inset:0;padding:0;display:flex;align-items:center;justify-content:center;background:#6E6054;text-align:center}
+#welcome-screen .welcome-visual{position:absolute;inset:0;width:100%;height:100%;background:url('assets/welcome-companion.png') center center/cover no-repeat}
+#welcome-screen .welcome-visual:after{inset:0;height:auto;background:linear-gradient(180deg,rgba(42,32,27,.06),rgba(42,32,27,.12) 34%,rgba(42,32,27,.33) 60%,rgba(42,32,27,.14))}
+#welcome-screen .welcome-panel{position:relative;flex:0 0 auto;z-index:1;width:100%;min-height:0;margin:80px 0 0;padding:24px 32px;background:transparent;border:0;border-radius:0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:none}
+#welcome-screen .welcome-wordmark{flex-direction:column;justify-content:center;gap:12px}
+#welcome-screen .welcome-wordmark svg{width:37px;height:37px;fill:#F5D7E1;stroke:none}
+#welcome-screen .welcome-brand h1{font-size:32px;line-height:1.25;font-weight:700;letter-spacing:-.5px;color:#FFFDFC;margin:0;text-shadow:0 1px 8px rgba(35,24,22,.14)}
+#welcome-screen .welcome-brand p{font-size:16px;line-height:1.6;color:#FFF9F7;margin:13px 0 0;text-shadow:0 1px 6px rgba(35,24,22,.22)}
+#welcome-screen .welcome-actions{width:100%;max-width:290px;margin:30px 0 0;padding:0}
+#welcome-screen .welcome-actions .cta{width:100%;min-height:50px;background:#D96F85;color:#FFF;border:0;border-radius:15px;font-size:16px;font-weight:600;box-shadow:0 3px 10px rgba(51,30,37,.12)}
+#welcome-screen .welcome-actions .cta:hover{background:#D2687E;box-shadow:0 3px 10px rgba(51,30,37,.12)}
+#welcome-screen .welcome-actions small{display:block;color:rgba(255,249,247,.65);font-size:11px;margin-top:13px;text-align:center;text-shadow:0 1px 4px rgba(35,24,22,.18)}
+.phone:has(#welcome-screen)>.home-indicator span{background:#FFF9F7}
+@media(max-height:650px){#welcome-screen .welcome-panel{margin-top:35px;padding-top:16px;padding-bottom:16px}#welcome-screen .welcome-actions{margin-top:22px}}
+/* One concise helper line per home action. */
+.features .primary small,.features .secondary-actions small{display:block!important;font-size:11px;line-height:1.4;color:#939099;font-weight:400;white-space:nowrap;letter-spacing:0;margin-top:5px}
+.features .secondary-actions button{padding:12px 2px;min-height:108px}
+.features .secondary-actions b{margin-top:7px}
+@media(max-width:360px){.features .secondary-actions{gap:6px}.features .secondary-actions small{font-size:11px;letter-spacing:-.5px}}
+.features .primary small,.features .secondary-actions small{font-size:10.5px}
+/* Softer primary action with a slightly deeper blush surface. */
+.features .primary,.features .primary:hover{background:#FFF1F4;border:.5px solid rgba(191,139,157,.10);box-shadow:none}
+.features .primary b{font-weight:600;font-size:19px}
+.features .primary .icon-circle,.features .primary>span:last-child{color:#D96F85}
+/* Welcome CTA: translucent warm milk surface, local to the opening screen. */
+#welcome-screen .welcome-actions .cta{height:54px;min-height:54px;display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(255,249,246,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,252,250,.62);border-radius:18px;color:#885868;font-size:16px;font-weight:600;box-shadow:0 2px 8px rgba(52,35,39,.06);padding:0 20px}
+#welcome-screen .welcome-actions .cta:hover{background:rgba(255,250,248,.9);box-shadow:0 2px 8px rgba(52,35,39,.06)}
+#welcome-screen .welcome-enter-arrow svg{width:17px;height:17px;stroke-width:1.7}
+@supports not ((backdrop-filter:blur(10px)) or (-webkit-backdrop-filter:blur(10px))){#welcome-screen .welcome-actions .cta{background:rgba(255,249,246,.94)}}
+/* Home care CTA derives every rose tint from the existing brand token. */
+.features .primary,.features .primary:hover{background:color-mix(in srgb,var(--pink) 6%,transparent);border:.5px solid color-mix(in srgb,var(--pink) 15%,transparent);box-shadow:none;background-image:none}
+.features .primary .icon-circle{background:color-mix(in srgb,var(--pink) 11%,transparent);color:var(--pink)}
+.features .primary>span:last-child{color:var(--pink)}
+.features .primary b{font-weight:600}
+.features .primary small{color:#939099}
+/* Gentle elevation for the main home action, retaining its brand tint. */
+.features .primary,.features .primary:hover{background:color-mix(in srgb,var(--pink) 6%,#FFFDFC);border:1px solid color-mix(in srgb,var(--pink) 10%,transparent);box-shadow:0 4px 12px rgba(80,60,70,.05)}
+.symptom-pet-card{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#FFFDFC;border:1px solid color-mix(in srgb,var(--pink) 10%,transparent);border-radius:18px;box-shadow:0 3px 10px rgba(80,60,70,.035);padding:12px 14px;margin-bottom:14px;min-height:116px}
+.symptom-pet-copy{min-width:0;flex:1}.symptom-pet-switch{display:flex;align-items:center;gap:10px;min-height:36px;text-align:left}.symptom-pet-switch b{font-size:21px;font-weight:650;color:#30343B}.symptom-pet-switch svg{width:17px;height:17px;color:#B78190}
+.symptom-pet-copy p{font-size:12px;line-height:1.5;color:#7A7F87;margin:2px 0 8px;overflow-wrap:anywhere}
+.symptom-pet-status{display:inline-flex;align-items:center;gap:4px;padding:3px 7px;background:#F8EFF2;color:#A27D89;border-radius:6px;font-size:11px}.symptom-pet-status svg{width:13px;height:13px}
+.symptom-pet-card>.avatar{width:84px;height:88px;flex:0 0 84px;border-radius:14px;box-shadow:none}
+.symptom-pet-options{display:flex;flex-direction:column;gap:10px}.symptom-pet-options button{width:100%;display:flex;align-items:center;gap:12px;padding:14px;background:#FFFDFC;border:1px solid #F0E7EB;border-radius:14px;text-align:left}.symptom-pet-options button>div:not(.avatar){flex:1}.symptom-pet-options b{font-size:16px}.symptom-pet-options p{font-size:12px;margin:5px 0 0}.symptom-pet-options button>svg{color:#C38B9C;width:18px;height:18px}.symptom-pet-options button[aria-pressed=true]{border-color:#E4C8D1;background:#FFFBFC}
+.hospital-companion-card{height:116px;margin:0 0 13px;overflow:hidden;border-radius:18px;border:1px solid color-mix(in srgb,var(--pink) 10%,transparent);box-shadow:0 3px 10px rgba(80,60,70,.035);background:#FFFDFC}
+.hospital-companion-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 65%}
+.care-choice-options .care-choice-label{display:inline-block;font-size:11px;line-height:1.5;padding:3px 7px;margin-top:9px;border-radius:6px;background:color-mix(in srgb,var(--pink) 7%,#FFFDFC);color:#A17E89}
+.care-choice-options>button{box-shadow:0 2px 7px rgba(80,60,70,.025)}
+.care-companion-strip{display:flex;align-items:center;gap:16px;margin:22px 0 18px;padding:0 2px}
+.care-companion-strip img{width:128px;height:85px;object-fit:cover;object-position:center 62%;border-radius:12px;flex-shrink:0}
+#sheet-body .care-companion-strip p{font-size:13px;line-height:1.8;color:#8A7C84;margin:0}
+.care-flow-hint{display:flex;align-items:center;justify-content:space-between;gap:4px;list-style:none;margin:0;padding:14px 0;border-top:1px solid #EEE8EB;color:#94848D;font-size:11px}
+.care-flow-hint li{display:flex;align-items:center;gap:4px;white-space:nowrap}.care-flow-hint li>span{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#F6EDF0;color:#B88C9B;font-size:10px}.care-flow-hint li[aria-hidden]{color:#C4B5BC}
+/* Hospital recommendations: compact 6–10px vertical rhythm. */
+.phone:has(.hospital-list)>header{padding-bottom:2px;height:47px}
+#scroll:has(.hospital-list){padding-top:0;padding-bottom:8px}
+#scroll:has(.hospital-list) .need-note{padding:6px 2px;margin:0 0 6px}
+#scroll:has(.hospital-list) .need-note small{margin-top:3px}
+#scroll:has(.hospital-list) .change-purpose{margin:0 0 6px 0;min-height:30px}
+.hospital-companion-card{height:116px;margin-bottom:6px}
+.hospital-companion-card img{object-position:center center}
+#scroll:has(.hospital-list) .filter-bar{padding:0 0 4px;margin-bottom:6px}
+#scroll:has(.hospital-list) .filter-bar button{min-height:44px}
+#scroll:has(.hospital-list) .hospital-card{margin-bottom:10px;padding:12px}
+#scroll:has(.hospital-list) .hospital-card:last-child{margin-bottom:0}
+#scroll:has(.hospital-list) .hospital-bottom{padding-top:8px}
+#scroll:has(.hospital-list) .filter-result{margin:0 0 8px}
+#scroll:has(.hospital-list) .specialty-dropdown{margin:0 0 10px}
+.phone:has(.hospital-list)>#route-footer{padding-top:8px;padding-bottom:6px}
+/* Symptom page only: image identity layer and restrained voice composition. */
+.symptom-pet-card.photo-led{height:144px;min-height:144px;position:relative;isolation:isolate;overflow:hidden;padding:15px 16px;background:#F7F2F0}
+.symptom-pet-card.photo-led>.avatar{position:absolute;inset:0;width:100%;height:100%;border-radius:0;z-index:-2;background-size:auto 575%;background-position:right 13.65%;box-shadow:none}
+.symptom-pet-card.photo-led>.dog-avatar{background-size:cover!important;background-position:center 42%!important}
+.symptom-pet-card.photo-led:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,252,250,.98) 0%,rgba(255,252,250,.87) 30%,rgba(255,252,250,.25) 58%,transparent 78%);pointer-events:none}
+.photo-led .symptom-pet-copy{flex:0 1 72%;align-self:center}.photo-led .symptom-pet-switch b{font-size:24px;font-weight:650}.photo-led .symptom-pet-copy p{color:#6F6B70;font-size:12px}.photo-led .symptom-pet-status{background:rgba(255,252,253,.86);color:#A67D8C}
+.symptom-voice-card{padding:15px 14px 13px;background:#FFFAFC;border:1px solid #F0E3E8;border-radius:18px;box-shadow:0 3px 10px rgba(80,60,70,.025);margin-bottom:14px}
+.page-scroll .symptom-voice-card h2{font-size:16px;line-height:1.5;margin:0;font-weight:600;color:#30343B}
+.symptom-voice-caption{font-size:12px;line-height:1.5;color:#8B8088;margin:5px 0 12px}
+.symptom-voice-input{display:flex;align-items:center;gap:12px}.voice-example{flex:1;min-width:0;background:#F9EEF2;border-radius:12px;padding:10px 12px}.voice-example>span{font-size:10px;color:#A68D98}.voice-example p{font-size:12px;line-height:1.7;margin:4px 0 0;color:#77636D}
+.voice-mic-action{display:flex;flex-direction:column;align-items:center;gap:6px;flex:0 0 62px;color:#AA7384;font-size:11px}.voice-mic-action svg{box-sizing:content-box;width:25px;height:25px;padding:14px;background:var(--pink);color:white;border-radius:50%;stroke-width:1.8}
+.voice-summary-tags{margin-top:12px;padding-top:11px;border-top:1px solid #F1E6EA}.voice-summary-label{display:block;font-size:11px;color:#92838B;margin-bottom:7px}.voice-summary-tags>div{display:flex;flex-wrap:wrap;gap:6px}.voice-summary-tags>div>span{font-size:11px;color:#A47A89;background:#F8EEF2;border-radius:7px;padding:4px 7px;line-height:1.3}
+/* Compact symptom voice input, retaining all existing controls. */
+.symptom-voice-card{padding:10px 12px 9px;margin-bottom:12px;background:#FFFEFE;border:1px solid #EFE8EB;box-shadow:0 2px 7px rgba(80,60,70,.02);border-radius:16px}
+.page-scroll .symptom-voice-card h2{font-size:14px;font-weight:600;line-height:1.4}
+.symptom-voice-caption{font-size:11px;line-height:1.4;margin:3px 0 7px;white-space:nowrap}
+.symptom-voice-input{gap:9px}
+.voice-example{padding:6px 9px;background:#FBF6F8;border-radius:9px}
+.voice-example>span{display:none}
+.voice-example p{font-size:11px;line-height:1.5;margin:0}
+.voice-mic-action{flex-basis:48px;gap:3px;font-size:10px}
+.voice-mic-action svg{width:20px;height:20px;padding:11px;stroke-width:1.7}
+.voice-summary-tags{margin-top:7px;padding-top:6px}
+.voice-summary-label{font-size:10px;margin-bottom:4px;line-height:1.3}
+.voice-summary-tags>div{gap:4px}
+.voice-summary-tags>div>span{font-size:10px;padding:3px 6px;line-height:1.2;border-radius:5px;background:#F9F3F5}
+/* Updated ragdoll photograph; other pets keep their own profile imagery. */
+.symptom-pet-card.photo-led>.cat-avatar{background-image:url('assets/pet-ragdoll-banner.png');background-size:cover;background-position:62% center}
+.hospital-companion-card img{object-position:center center}
+.care-identity{display:flex;align-items:center;gap:9px;padding:2px 2px 0;margin:0 0 22px;color:#89818A;font-size:12px}.care-identity .avatar{width:34px;height:34px;border-radius:11px;flex:0 0 34px}.care-identity b{font-weight:600;color:#4D4650}
+.care-task-choices{display:flex;flex-direction:column;gap:16px}.care-task-card{display:flex;align-items:center;gap:12px;width:100%;min-height:151px;padding:22px 16px;text-align:left;border:1px solid #EFE6EA;border-radius:18px;background:#FFFDFC;box-shadow:0 3px 10px rgba(80,60,70,.025)}
+.care-task-card:first-child{background:color-mix(in srgb,var(--pink) 5%,#FFFDFC);border-color:color-mix(in srgb,var(--pink) 20%,#FFFDFC)}
+.care-task-icon{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:12px;background:#F8EDF1;color:#B8798D}.care-task-icon svg{width:24px;height:24px}.care-task-card>div{flex:1;min-width:0}.care-task-card>svg{width:15px;height:15px;flex-shrink:0;color:#B79CA7}
+.care-task-tag{font-size:10px;line-height:1.4;color:#AD7B8B;background:#F5E9EE;padding:3px 6px;border-radius:5px}
+#sheet-body .care-task-card h2{font-size:16px;font-weight:600;line-height:1.5;margin:10px 0 7px;color:#343039}
+#sheet-body .care-task-card p{font-size:12px;line-height:1.6;color:#88808A;margin:0}
+.care-task-help{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:20px;padding:12px 14px;min-height:58px;border-radius:11px;background:#F7F3F5;text-align:left;color:#9B808D;font-size:12px;line-height:1.6}.care-task-help svg{width:17px;height:17px;flex-shrink:0;color:#BB8E9F}
+@media(max-width:360px){.care-task-card{padding:18px 12px;gap:9px}.care-task-icon{width:32px;height:36px;flex-basis:32px}#sheet-body .care-task-card h2{font-size:15px}}
+#sheet-body .care-task-intro{font-size:12px;line-height:1.7;color:#8B818A;margin:0 0 16px}
+.care-entry-steps{display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;margin:0 0 24px;padding:0;color:#9B939A;font-size:11px}
+.care-entry-steps li{display:flex;align-items:center;gap:5px;white-space:nowrap}.care-entry-steps li>span{width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:#F0EDEF;color:#A499A0;font-size:11px}
+.care-entry-steps li[aria-current=step]{color:#AF7185;font-weight:600}.care-entry-steps li[aria-current=step]>span{background:#F4E1E8;color:#AC6E82}
+.care-task-page .care-task-card{min-height:177px;padding:21px 14px;gap:10px;align-items:flex-start}
+.care-task-page .care-task-icon{margin-top:3px}.care-task-page .care-task-card>svg{align-self:center}
+#sheet-body .care-task-card h2{margin:0 0 8px;font-size:16px;font-weight:600;line-height:1.5}
+.care-task-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:13px}.care-task-tags>span{padding:3px 6px;border-radius:5px;background:#F7EDF1;color:#A27D8B;font-size:10px;line-height:1.5}
+.care-task-card:nth-child(2) .care-task-tags>span{background:#F4F0F2;color:#95848D}
+@media(max-width:360px){.care-task-page .care-task-card{padding:18px 12px;gap:8px}#sheet-body .care-task-card h2{font-size:15px}.care-entry-steps{gap:4px;font-size:10px}}
+/* Clear connected progress and compact task cards. */
+#sheet-body .care-task-intro{font-size:13px;line-height:1.6;margin:0 0 16px;text-align:center}
+.care-entry-steps{display:flex;justify-content:center;align-items:flex-start;gap:0;margin:0 0 20px;padding:0 2px;font-size:13px}
+.care-entry-steps li{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;line-height:1.4;color:#9A959C;font-size:13px;font-weight:500}
+.care-entry-steps li>span{position:relative;z-index:1;width:30px;height:30px;border-radius:50%;font-size:14px;background:#EEECEF;color:#AAA3AB}
+.care-entry-steps li:not(:last-child):after{content:'';position:absolute;left:calc(50% + 20px);top:15px;width:calc(100% - 40px);height:1px;background:#E4DEE3}
+.care-entry-steps li[aria-current=step]{color:#AD6B80;font-weight:600}.care-entry-steps li[aria-current=step]>span{background:var(--pink);color:#FFF}
+.care-task-choices{gap:13px}
+.care-task-page .care-task-card{display:grid;grid-template-columns:34px minmax(0,1fr) 14px;align-content:center;align-items:center;column-gap:9px;row-gap:5px;min-height:136px;padding:14px 13px}
+.care-task-page .care-task-card>div{display:contents}
+.care-task-page .care-task-icon{grid-column:1;grid-row:1 / 3;width:34px;height:38px;margin:0}.care-task-page .care-task-icon svg{width:23px;height:23px}
+#sheet-body .care-task-page .care-task-card h2{grid-column:2;grid-row:1;font-size:17px;font-weight:650;line-height:1.4;margin:0}
+#sheet-body .care-task-page .care-task-card p{grid-column:2;grid-row:2;font-size:13px;line-height:1.5;margin:0;color:#88818A}
+.care-task-page .care-task-card>svg{grid-column:3;grid-row:1 / 3;align-self:center}
+.care-task-page .care-task-card .care-task-tags{grid-column:1 / -1;grid-row:3;display:flex;flex-wrap:nowrap;gap:5px;margin:6px 0 0}
+.care-task-page .care-task-tags>span{font-size:11px;line-height:1.4;padding:3px 5px;white-space:nowrap}
+@media(max-width:360px){.care-task-page .care-task-card{padding:13px 10px;column-gap:7px;grid-template-columns:30px minmax(0,1fr) 12px}.care-task-page .care-task-icon{width:30px}#sheet-body .care-task-page .care-task-card h2{font-size:16px}#sheet-body .care-task-page .care-task-card p{font-size:12px}.care-task-page .care-task-tags>span{font-size:10.5px;padding:3px 4px}.care-task-page .care-task-card .care-task-tags{gap:4px}}
+/* Unified selected controls; navigation uses line weight instead of a filled tile. */
+:root{--selection-bg:color-mix(in srgb,var(--pink) 13%,#FFFDFC);--selection-fg:var(--pink)}
+.choice,.chips button,.filter-bar button,.tabs button,.specialty-dropdown-options button,.compare-toggle,.select-pet,.symptom-pet-options button{transition:background-color 200ms ease,color 200ms ease,border-color 200ms ease,transform 200ms ease}
+.choice.selected,.chips button.selected,.filter-bar .selected,.tabs .selected,.archive-tabs .selected,.specialty-dropdown-options .selected,.compare-toggle.checked,.select-pet[aria-current=true],.symptom-pet-options button[aria-pressed=true]{background:var(--selection-bg);color:var(--selection-fg);border-color:color-mix(in srgb,var(--pink) 22%,transparent);border-radius:9px;box-shadow:none;font-weight:600}
+.filter-bar .selected:after,.tabs .selected:after{display:none}
+.filter-bar button,.tabs button{border-radius:9px}
+.symptom-pet-options button[aria-pressed=true]>svg{color:var(--selection-fg)}
+.pet-slide.selected{background:var(--selection-bg);border-color:color-mix(in srgb,var(--pink) 22%,#FFFDFC);box-shadow:none}
+.pet-dot.selected:after{background:var(--pink)}
+nav button,nav button.active{background:transparent!important;box-shadow:none;transform:none!important;transition:color 200ms ease;color:#78808A;font-weight:400}
+nav button svg{fill:none;stroke:currentColor;stroke-width:1.65;transition:stroke 200ms ease,stroke-width 200ms ease}
+nav button.active{color:var(--pink);font-weight:600}
+nav button.active svg{fill:none;stroke:currentColor;stroke-width:2.2}
+@media(prefers-reduced-motion:reduce){.choice,.chips button,.filter-bar button,.tabs button,.specialty-dropdown-options button,.compare-toggle,.select-pet,.symptom-pet-options button,nav button,nav button svg{transition:none}}
+#scroll:has(.hospital-list) .hospital-pet-identity{margin-bottom:8px}
+/* One quiet container with a moving near-white selection surface. */
+#scroll:has(.hospital-list) .filter-bar.hospital-segments{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative;padding:4px;background:#F3EFF1;border:0;border-radius:13px;isolation:isolate;margin-bottom:8px}
+.hospital-segment-indicator{position:absolute;left:4px;top:4px;bottom:4px;z-index:-1;background:#FFFCFD;border:1px solid #EEE0E6;border-radius:10px;box-shadow:0 1px 4px rgba(80,60,70,.045);pointer-events:none}
+#scroll .hospital-segments button,#scroll .hospital-segments button.selected{background:transparent;border:0;box-shadow:none;border-radius:10px;min-height:40px;padding:7px 2px;color:#89818A;font-weight:400;transform:none!important;animation:none!important;transition:color 200ms ease}
+#scroll .hospital-segments button.selected{color:var(--pink);font-weight:600}
+#scroll .hospital-segments button:after{display:none}
+/* Cleaner colors for the hospital segmented selector; layout and motion unchanged. */
+#scroll:has(.hospital-list) .filter-bar.hospital-segments{background:#FCFAFA}
+.hospital-segment-indicator{background:#FFFDFD;border-color:#F1E5EA;box-shadow:0 1px 3px rgba(80,60,70,.025)}
+#scroll .hospital-segments button{color:#7A7F87}
+#scroll .hospital-segments button.selected{color:var(--pink)}
+#scroll .archive-tabs.archive-segments{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative;gap:0;padding:4px;margin-bottom:14px;background:#FCFAFA;border:0;border-radius:13px;isolation:isolate}
+.archive-segment-indicator{position:absolute;left:4px;top:4px;bottom:4px;z-index:-1;background:#FFFDFD;border:1px solid #F1E5EA;border-radius:10px;box-shadow:0 1px 3px rgba(80,60,70,.025);pointer-events:none}
+#scroll .archive-segments button,#scroll .archive-segments button.selected{background:transparent;border:0;box-shadow:none;border-radius:10px;min-height:40px;padding:7px 2px;color:#7A7F87;font-weight:400;transform:none!important;animation:none!important;transition:color 200ms ease}
+#scroll .archive-segments button.selected{color:var(--pink);font-weight:600}
+#scroll .archive-segments button:after{display:none}
+@media(prefers-reduced-motion:reduce){#scroll .archive-segments button{transition:none}}
+#scroll .tabs.medication-segments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));position:relative;gap:0;padding:4px;margin-bottom:14px;background:#FCFAFA;border:0;border-radius:13px;isolation:isolate}
+.medication-segment-indicator{position:absolute;left:4px;top:4px;bottom:4px;z-index:-1;background:#FFFDFD;border:1px solid #F1E5EA;border-radius:10px;box-shadow:0 1px 3px rgba(80,60,70,.025);pointer-events:none}
+#scroll .medication-segments button,#scroll .medication-segments button.selected{background:transparent;border:0;box-shadow:none;border-radius:10px;min-height:40px;padding:7px 2px;color:#7A7F87;font-weight:400;transform:none!important;animation:none!important;transition:color 200ms ease}
+#scroll .medication-segments button.selected{color:var(--pink);font-weight:600}
+#scroll .medication-segments button:after{display:none}
+@media(prefers-reduced-motion:reduce){#scroll .medication-segments button{transition:none}}
+/* Selected pet matches the clean segmented selection palette. */
+.pet-slide{background:#FCFAFA;border-color:transparent;box-shadow:none}
+.pet-slide.selected{background:#FFFDFD;border:1px solid #F1E5EA;box-shadow:0 1px 3px rgba(80,60,70,.025)}
+.pet-slide .select-pet{background:transparent;border-radius:0;box-shadow:none}
+.pet-slide .select-pet[aria-current=true]{background:transparent;color:var(--pink);font-weight:600;border-color:#F1E5EA;border-radius:0;box-shadow:none}
+.pet-switch-hint{display:flex;justify-content:center;align-items:center;width:100%;margin-top:10px}
+.pet-switch-hint>div{display:flex;justify-content:center;align-items:center;gap:6px;margin:0 auto}
+.pet-dot.selected:after{background:var(--pink)}
+.pet-carousel{padding:2px 16px 8px;gap:12px;scroll-padding-inline:16px}
+.pet-carousel .pet-photo-slide{flex:0 0 100%;height:168px;padding:0;scroll-snap-align:center;position:relative;overflow:hidden;isolation:isolate;border-radius:18px;border:1px solid rgba(191,156,169,.13);background:#FFFDFC;box-shadow:0 2px 7px rgba(80,60,70,.025)}
+.pet-photo-slide .pet-card-main{position:relative;display:flex;align-items:center;height:100%;width:100%;padding:16px;text-align:left;isolation:isolate}
+.pet-photo-slide .pet-card-main .avatar{position:absolute;inset:0;width:100%;height:100%;border-radius:0;z-index:-2}
+.pet-photo-slide .pet-card-main .cat-avatar{background-image:url('assets/pet-ragdoll-banner.png');background-size:cover;background-position:65% center}
+.pet-photo-slide .pet-card-main .dog-avatar{background-position:center 42%!important}
+.pet-photo-slide .pet-card-main:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,252,250,.98),rgba(255,252,250,.83) 33%,rgba(255,252,250,.18) 65%,transparent)}
+.pet-photo-slide .pet-card-main>div:not(.avatar){max-width:75%}.pet-photo-slide .pet-card-main h2{font-size:25px;font-weight:650;margin:0 0 6px}.pet-photo-slide .pet-card-main p{font-size:12px;color:#797078;margin:0 0 5px}.pet-photo-slide .pet-card-main small{font-size:11px;color:#8A7F87}
+.pet-photo-status{display:table;padding:3px 7px;border-radius:6px;background:rgba(255,250,252,.88);color:#B18492;font-size:11px;margin-top:10px}.pet-photo-slide .pet-card-main>span:last-child{color:#B48191}
+.pet-carousel-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:1px;color:#958891;font-size:11px}.pet-carousel-controls button{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#F6F0F3;color:#B58193}.pet-carousel-controls button:disabled{opacity:.3;cursor:default}.pet-carousel-controls svg{width:16px;height:16px}.pet-carousel-controls b{font-weight:500;color:#AF8897;margin-left:6px}
+.symptom-voice-card.compact-voice{display:grid;grid-template-columns:minmax(0,1fr) 44px;column-gap:8px;row-gap:5px;padding:9px 11px 8px;background:#FFFEFE;border:.5px solid #EFE6EB;box-shadow:0 2px 6px rgba(80,60,70,.02)}
+#scroll .compact-voice h2{font-size:14px;font-weight:600;line-height:1.4;margin:0}
+.compact-voice .symptom-voice-caption{font-size:11px;line-height:1.4;margin:2px 0 3px;white-space:normal}
+.compact-voice .voice-mic-action{align-self:center;position:relative;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--pink);color:#FFF}
+.compact-voice .voice-mic-action svg{width:21px;height:21px;padding:0;background:none}
+.voice-wave{display:flex;align-items:center;gap:3px;height:20px;color:#D5A3B3}
+.voice-wave i{display:block;width:2px;height:var(--wave-height);border-radius:2px;background:currentColor;transform-origin:center}
+.compact-voice .voice-summary-tags{grid-column:1 / -1;display:flex;align-items:center;gap:7px;margin:0;padding-top:5px;border-top:1px solid #F4EDF0;min-height:23px}
+.compact-voice .voice-summary-label{white-space:nowrap;margin:0;font-size:10px;line-height:1.3;color:#A2969E}
+.compact-voice .voice-summary-tags>div{display:flex;flex-wrap:wrap;gap:4px}
+.compact-voice .voice-summary-tags>div>span{padding:2px 5px;font-size:10px;line-height:1.3}
+.voice-activating .voice-mic-action:after{content:'';position:absolute;inset:-3px;border:1px solid var(--pink);border-radius:50%;animation:voice-breathe 200ms ease-out both}
+.voice-activating .voice-wave i{animation:voice-wave-pulse 200ms ease-in-out both;animation-delay:var(--wave-delay)}
+@keyframes voice-breathe{from{transform:scale(.98);opacity:.45}to{transform:scale(1.15);opacity:0}}
+@keyframes voice-wave-pulse{0%,100%{transform:scaleY(.75)}50%{transform:scaleY(1.12)}}
+@media(prefers-reduced-motion:reduce){.voice-activating .voice-wave i,.voice-activating .voice-mic-action:after{animation:none}}
+.reduce-motion .voice-activating .voice-wave i,.reduce-motion .voice-activating .voice-mic-action:after{animation:none}
+/* Breathing room for the compact voice input, without additional copy. */
+.symptom-voice-card.compact-voice{grid-template-columns:minmax(0,1fr) 40px;column-gap:10px;row-gap:8px;padding:13px 12px 11px;background:color-mix(in srgb,var(--pink) 4%,#FFFDFC)}
+.compact-voice .symptom-voice-caption{margin:7px 0 8px;line-height:1.4;white-space:nowrap}
+.compact-voice .voice-wave{height:22px;width:max-content;max-width:100%;gap:3px}
+.compact-voice .voice-mic-action{width:40px;height:40px;align-self:center}
+.compact-voice .voice-mic-action svg{width:20px;height:20px}
+.compact-voice .voice-summary-tags{display:flex;align-items:flex-start;gap:8px;margin:0;padding-top:9px;min-height:29px}
+.compact-voice .voice-summary-label{padding-top:2px}
+.compact-voice .voice-summary-tags>div{gap:6px}
+/* Larger, lighter microphone action; existing click feedback retained. */
+.symptom-voice-card.compact-voice{grid-template-columns:minmax(0,1fr) 48px}
+.compact-voice .voice-mic-action{width:48px;height:48px;border-radius:50%;background:color-mix(in srgb,var(--pink) 9%,#FFFDFC);border:1px solid color-mix(in srgb,var(--pink) 18%,#FFFDFC);color:var(--pink);box-shadow:0 2px 6px rgba(80,60,70,.025)}
+.compact-voice .voice-mic-action svg{width:23px;height:23px;background:transparent;color:var(--pink);padding:0}
+/* Solid brand buttons use a consistent white, slightly stronger label. */
+.cta,.wide-button,.small-primary,.hospital-detail-actions .cta{color:#FFF;font-weight:650}
+.cta svg,.wide-button svg,.small-primary svg{color:inherit;stroke:currentColor}
+/* Translucent welcome action keeps its contrasting rose label. */
+#welcome-screen .welcome-actions .cta{color:#885868;font-weight:650}
+.visit-hospital-select{display:flex;align-items:center;gap:10px;width:100%;padding:11px 12px;margin:0 0 12px;background:#FFFDFC;border:1px solid #F0E7EB;border-radius:12px;text-align:left}
+.visit-hospital-select>span{color:#BB8595}.visit-hospital-select>div{flex:1;min-width:0}.visit-hospital-select small{display:block;font-size:11px;color:#9A8B93;margin-bottom:4px}.visit-hospital-select b{display:block;font-size:14px;font-weight:600;color:#45404A}.visit-hospital-select p{font-size:11px;color:#8A8189;margin:5px 0 0}.visit-hospital-select>svg{width:16px;height:16px;color:#B993A1}
+.visit-hospital-options{display:flex;flex-direction:column;gap:10px}.visit-hospital-options>button{display:flex;align-items:center;gap:10px;width:100%;padding:12px;background:#FFFDFC;border:1px solid #EEE5E9;border-radius:14px;text-align:left}.visit-hospital-options .source-photo{width:58px;height:58px;border-radius:10px;flex-shrink:0}.visit-hospital-options>button>div:not(.source-photo){flex:1}.visit-hospital-options b{font-size:14px}.visit-hospital-options p{font-size:12px;margin:5px 0 0}.visit-hospital-options>button>svg{color:var(--pink);width:17px;height:17px}.visit-hospital-options>button[aria-pressed=true]{background:#FFFDFD;border-color:#E7CBD5}
